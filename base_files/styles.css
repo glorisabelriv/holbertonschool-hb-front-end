@@ -1,32 +1,438 @@
-/* 
-  This is a SAMPLE File to get you started. Follow the instructions on the project to complete the tasks. 
-  You'll probably need to override some of theese styles.
-*/
-
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 1rem;
-}
-
-main {
-    padding: 2rem;
-}
+    box-sizing: border-box;
+    }
+    
+    html, body {                              /* maneja el cuerpo y la foto de la pagina */
+        font-family: Arial, sans-serif;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('palms.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    
+    h1 {                                     /* header de available places */
+        margin: 3.5rem;
+        text-align: center;
+        color: #020202d0;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    
+    body {                                  /* maneja el body y l foto en index */
+        font-family: Arial, sans-serif;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url('palms.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    
+    
+    header, footer {                 /* la parte de arriba y abajo */
+        background-color: #038ffb;
+        position: fixed;
+        justify-content: space-between;
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+        padding: 10px 10px;
+        z-index: 1000;
+    }
+    
+    header header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+        padding: 10px 20px;
+    }
+    
+    header .logo {                  /* logo de holbie */
+        width: 75px;
+        height: auto;
+        margin-right: 10px;
+        background-color: #182b530e;
+    
+        border-radius: 60px;
+    }
+    
+    .header-content {
+        display: flex;
+        align-items: center;
+    }
+    
+    
+    .header-content .logo {
+        width: 35px;
+        height: auto;
+    }
+    
+    .header-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #080808;
+        margin-left: 10px; /* Espacio entre el logo y el texto */
+    }
+    
+    .header-text {
+        font-size: 1.8rem;
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 1.5;
+        color: #ffffff;
+    }
+    
+    #social-media-icons {
+        display: flex;
+        gap: 10px;
+    }
+    
+    #logo-text {
+        color: #ffffff;
+        font-size: 1.6rem;
+    }
+    
+    
+    footer p {
+        margin: 0;
+        text-align: center;
+    }
+    
+    main {
+    padding-top:180px;
+    padding-bottom: 60px;
+    text-align: center;
+    }
+    
+    
+    footer {                         /* footer de la pagina */
+        position: center;
+        margin: 0;
+        padding: 1;
+        box-sizing: border-box;
+        width: 100%;
+        height: 0px;
+        justify-content: center;
+        align-items: center;
+        filter: drop-shadow(0 0 0.4rem rgb(255, 255, 255));
+        bottom: 0px;
+        height: 50px;
+        display: flex;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    
+    #filter {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    #filter label {
+        font-weight: bold;
+    }
+    
+    #filter select {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    #country-filter {
+        padding: 10px;
+        background-color: #007BFF;
+        color: rgb(254, 251, 251);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        filter: drop-shadow(0 0 0.9rem rgb(135, 134, 134));
+    }
+    
+    #login-form {                      /* body del login */
+        border: 30px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        padding: 15px;
+        margin: 40px;
+        filter: drop-shadow(0 0 0.9rem rgb(121, 121, 121));
+    }
+    
+    
+    #login-form label {                /* columna de login */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    h2 {                               /* header de login en login page */
+        size-adjust: 30px;
+        font-size: 30px;
+    }
+    
+    .login-container label {
+        font-weight: bold;
+    }
+    
+    #login-form input {
+        padding: 10px;
+        margin: 20px;
+        width: 60%;
+        border: 1.5px solid #010000;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    
+    #login-form button {
+        padding: 10px 20px;
+        margin: 20px;
+        background-color: #07396f;
+        color:rgb(255, 255, 255);
+        border: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        height: 50px;
+        width: 60%
+    }
+    
+    .login-container button:hover {
+        background-color: antiquewhite;
+    }
+    
+    .places-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .place-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        filter: drop-shadow(0 0 0.4rem rgb(91,91, 91));
+        background-color: #ffffff;
+        max-width: 300px;
+        width: 100%;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .place-card h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .place-card form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .place-card label {
+        font-weight: bold;
+    }
+    
+    .place-card input {
+        padding: 10px;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .place-card, .review-card {                      /* cajas de apt en index */
+        border: 0.5px solid #000000;
+        border-radius: 20px;
+        margin: 40px;
+        padding: 20px;
+        width: 200px;
+        background-color: #ffffff;
+    }
+    
+    .place-info img {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        border: 5px solid #dfd4d4;                /* Agrega un borde de 5px de color gris claro */
+        border-radius: 10px;                        /* Ajusta el radio del borde para redondear las esquinas */
+        object-fit: cover;
+        margin-bottom: 20px;
+    
+    }
+    
+    .place-detail {                                 /* detalles de las cajas de apt */
+        border: 30px;
+        border-radius: 30px;
+        background-color: #ffffff;
+        padding: 15px;
+        margin: 40px;
+        filter: drop-shadow(0 0 0.9rem rgb(121, 121, 121));
+    }
+    
+    .place-detail h, p {                            /* texto dentro de las cajas de apt */
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    
+    #reviews {                                      /* brega con los reviews en view details */
+        margin: 40px;
+        padding: 40px;
+        background-color: #ffffff;
+        border: 1px solid #ffffff;
+        font-size: 18px;
+        border-radius: 10px;
+        filter: drop-shadow(0 0 0.9rem rgb(121, 121, 121));
+    }
+    
+    
+    #reviews-table {
+        width: 100%;
+        border-collapse: collapse;
+        padding: 1px;
+        margin-top: 20px;
+        display: flex;
+    }
+    
+    
+    
+    #add-review {                                     /* brega con la caja de review en view details */
+        border: 30px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        padding: 20px;
+        margin: 40px;
+        filter: drop-shadow(0 0 0.9rem rgb(121, 121, 121));
+        margin-top:60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #add-review h2 {
+        margin-bottom: 20px;
+    }
+    
+    #add-review form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    
+    }
+    
+    #add-review label {
+        font-weight: bold;
+    }
+    
+    #add-review textarea, #add-review select {
+        padding: 10px;
+        border: 2px solid #ddd;
+        border-radius: 15px;
+        font-size: 13px;
+        margin: 0px;
+    }
+    
+    #add-review textarea {
+        height: 35.5px;
+        margin-bottom: 10px;
+        resize: none;
+    }
+    
+    #add-review button {
+        padding: 10px;
+        background-color: #007BFF;
+        color:rgb(255, 255, 255);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    #add-review button:hover {
+        background-color: #0056b3;
+    }
+    
+    
+    #Rating {
+        border: 30px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        padding: 20px;
+        margin: 40px;
+        filter: drop-shadow(0 0 0.9rem rgb(255, 255, 255));
+        margin-top:60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #Rating h2 {
+        margin-bottom: 20px;
+    }
+    
+    #Rating p {
+        font-size: 16px;
+    }
+    
+    
+    .place-image, .place-image-large {
+        width: 100%;
+        border-radius: 10px;
+    }
+    
+    .place-card .button {      /* boton de adentro de los apt en index */
+        padding: 10px;
+        background-color: #007BFF;
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    .place-card .button:hover {
+        background-color: #0056b3;
+    }
+    
+    .login-form, .add-review-form {       /* login de la pagina de login */
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 300px;
+        margin: auto;
+    }
+    
+    button {              /*boton login de la mano derecha arriaba */
+        padding: 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    

@@ -5,20 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Review</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
 </head>
 <body>
+    <header>
+        <div class="logo-image">
+            <a href="index.html">
+                <img src="logo.png" alt="logo" class="logo">
+            </a>
+        </div>
+        <nav>
+            <a href="login.html" class="login-button">
+                <button class="button">Login</button>
+            </a>
+        </nav>
+    </header>
+
     <main>
-        <form id="review-form">
-            <h2>Add a Review</h2>
-            <label for="place">Place:</label>
-            <input type="text" id="place" name="place" readonly>
-            
-            <label for="review">Review:</label>
-            <textarea id="review" name="review" required></textarea>
-            
-            <button type="submit">Submit</button>
-        </form>
+        <div class="add-review-form">
+            <h1>Add Review</h1>
+            <form action="place.html" method="post">
+				<input type="hidden" id="place_id" name="place_id" value="PLACE_ID_HERE">
+
+                <label for="review">Review:</label>
+                <textarea id="review" name="review" required></textarea>
+
+                <label for="rating">Rating:</label>
+                <textarea id="rating" name="rating" required></textarea>
+
+                <select id="rating" name="rating" required>
+                    <option value="1">★☆☆☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="5">★★★★★</option>
+                </select>
+                <button type="submit" class="button">Submit Review</button>
+            </form>
+        </div>
     </main>
-    <script src="scripts.js"></script>
+
+    <footer>
+        <p>All rights reserved</p>
+    </footer>
 </body>
 </html>
